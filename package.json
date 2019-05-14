@@ -1,0 +1,31 @@
+{
+  "name": "safer-function",
+  "version": "0.1.0",
+  "description": "Function traps for bind, call, and apply.",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "unpkg": "index.js",
+  "scripts": {
+    "build": "npm run cjs && npm run esm && npm test",
+    "cjs": "cp index.js cjs/ && echo 'module.exports = {bind, call, apply};'>>cjs/index.js",
+    "esm": "cp index.js esm/ && echo 'export {bind, call, apply};'>>esm/index.js",
+    "test": "node -e 'require(`./`).call(console.log, console, \"OK\")'"
+  },
+  "keywords": [
+    "secure",
+    "function",
+    "call",
+    "apply",
+    "bind"
+  ],
+  "author": "Andrea Giammarchi",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebReflection/safer-function.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WebReflection/safer-function/issues"
+  },
+  "homepage": "https://github.com/WebReflection/safer-function#readme"
+}
