@@ -9,7 +9,7 @@
     "build": "npm run cjs && npm run esm && npm test",
     "cjs": "cp index.js cjs/ && echo 'module.exports = {bind, call, apply};'>>cjs/index.js",
     "esm": "cp index.js esm/ && echo 'export {bind, call, apply};'>>esm/index.js",
-    "test": "node -e 'require(`./`).call(console.log, console, \"OK\")'"
+    "test": "istanbul cover test/index.js"
   },
   "keywords": [
     "secure",
@@ -27,5 +27,9 @@
   "bugs": {
     "url": "https://github.com/WebReflection/safer-function/issues"
   },
-  "homepage": "https://github.com/WebReflection/safer-function#readme"
+  "homepage": "https://github.com/WebReflection/safer-function#readme",
+  "devDependencies": {
+    "coveralls": "^3.0.3",
+    "istanbul": "^0.4.5"
+  }
 }
