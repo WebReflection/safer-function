@@ -1,6 +1,6 @@
 {
   "name": "safer-function",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Function traps for bind, call, and apply.",
   "main": "cjs/index.js",
   "module": "esm/index.js",
