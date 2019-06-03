@@ -8,6 +8,7 @@
   "scripts": {
     "build": "npm run cjs && npm run esm && npm test",
     "cjs": "cp index.js cjs/ && echo 'module.exports = {bind, call, apply};'>>cjs/index.js",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
     "esm": "cp index.js esm/ && echo 'export {bind, call, apply};'>>esm/index.js",
     "test": "istanbul cover test/index.js"
   },
